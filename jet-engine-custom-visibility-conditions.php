@@ -31,11 +31,15 @@ function jet_engine_cvc() {
 		require JET_ECVC_PATH . 'post-by-user.php';
 		require JET_ECVC_PATH . 'user-meta.php';
 		require JET_ECVC_PATH . 'user-meta-is-post-meta.php';
+		require JET_ECVC_PATH . 'wishlist-has-products.php';
+		require JET_ECVC_PATH . 'compare-has-products.php';
 
 		$conditions_manager->register_condition( new Jet_Engine_CVC\Post_Status() );
 		$conditions_manager->register_condition( new Jet_Engine_CVC\Post_By_User() );
 		$conditions_manager->register_condition( new Jet_Engine_CVC\User_Meta_Is() );
 		$conditions_manager->register_condition( new Jet_Engine_CVC\User_Meta_Is_Post_Meta() );
+		$conditions_manager->register_condition( new Jet_Engine_CVC\Wishlist_Has_Products() );
+		$conditions_manager->register_condition( new Jet_Engine_CVC\Compare_Has_Products() );
 
 	} );
 
